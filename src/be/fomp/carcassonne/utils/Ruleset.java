@@ -6,7 +6,6 @@ import java.util.Map;
 
 import be.fomp.carcassonne.game.objects.FollowerType;
 import be.fomp.carcassonne.model.Player;
-import be.fomp.gmc.game.objects.GameObject;
 
 /**
  * Contains the main rules of the game

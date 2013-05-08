@@ -10,7 +10,7 @@ import be.fomp.carcassonne.model.Player;
 /**
  * Contains the main rules of the game
  * 
- * @author sven
+ * @author GMc14
  * 
  */
 public class InnsCathedralsRuleset extends Ruleset {
