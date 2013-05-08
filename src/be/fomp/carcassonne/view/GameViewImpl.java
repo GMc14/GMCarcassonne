@@ -45,11 +45,11 @@ public class GameViewImpl extends JFrame implements GameView, ActionListener, Ch
 	@Override
 	public void createView() {
 		this.setTitle("Carcassonne");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setResizable(false);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
+
 		this.setLayout(null);
 		this.setLocation(50,50);
-		this.setSize(new Dimension(WINDOW_W,WINDOW_H));
+		this.setMinimumSize(new Dimension(WINDOW_W,WINDOW_H));
 		
 		gameMenu 	 = new GameViewMenuBar		(controller);
 		gameMapPanel = new GameViewMapPanel		(model, controller);
