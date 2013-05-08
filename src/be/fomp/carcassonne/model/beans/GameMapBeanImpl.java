@@ -30,12 +30,12 @@ public class GameMapBeanImpl extends Observable implements GameMapBean{
 	}
 
 	@Override
-	public Integer getActiveXPos() {
+	public Integer getActiveX() {
 		return this.activeXPos;
 	}
 
 	@Override
-	public Integer getActiveYPos() {
+	public Integer getActiveY() {
 		return this.activeYPos;
 	}
 

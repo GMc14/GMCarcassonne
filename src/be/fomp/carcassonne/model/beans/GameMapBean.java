@@ -9,9 +9,10 @@ public interface GameMapBean extends Observable, Serializable {
 	
 	void setMap(TileBean[][] map);
 	
-	Integer getActiveXPos();
-	Integer getActiveYPos();
+	Integer getActiveX();
+	Integer getActiveY();
 	Integer getActiveFollowerLocation();
+
 	
 	void setActiveXPos(Integer xPos);
 	void setActiveYPos(Integer yPos);
