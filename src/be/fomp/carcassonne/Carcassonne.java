@@ -20,12 +20,12 @@ public class Carcassonne {
 		//PlayerController pc = new PlayerControllerImpl(player,gc);
 		Player player1 = new PlayerImpl();
 		player1.setName("Sven");
-		player1.setAge(21);
-		player1.setColor(Color.BLACK);
+		player1.setAge(22);
+		player1.setColor(Color.BLUE);
 		
 		Player player2 = new PlayerImpl();
-		player2.setName("Sven2");
-		player2.setAge(22);
+		player2.setName("GMc");
+		player2.setAge(26);
 		player2.setColor(Color.RED);
 		
 		try{

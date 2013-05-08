@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="deck.xsd">
+  <tile id="0" ammount="1">
+    <city>0,1,2</city>
+    <field>3,11</field>
+    <road>4,10,12</road>
+    <field>5,6,7,8,9</field>
+  </tile>
+  <tile id="1" ammount="4">
+    <cloister>12</cloister>
+    <field>0,1,2,3,4,5,6,7,8,9,10,11</field>
+  </tile>
+  <tile id="22" ammount="2">
+    <field>0,1,2,3,4,5,6,11</field>
+    <road>7,10,12</road>
+    <field>8,9</field>
+  </tile>
+</deck>

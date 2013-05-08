@@ -33,7 +33,7 @@ public final class TileImageFactory {
 	private BufferedImage getImage(Integer id){
 		if(imageCache.get(id) == null)
 			try {                
-	          BufferedImage image = ImageIO.read(getClass().getResource("/data/images/"+id+".jpg"));
+	          BufferedImage image = ImageIO.read(getClass().getResource("/be/fomp/carcassonne/data/images/"+id+".jpg"));
 	     
 	          imageCache.put(id, image);
 			} catch (IOException ex) {
