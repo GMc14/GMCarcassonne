@@ -39,7 +39,7 @@ public class GameViewScorePanel extends JPanel implements GameView {
 	@Override
 	public void createView() {
 		setLayout(new GridLayout(0,2));
-		setBackground(java.awt.Color.LIGHT_GRAY);
+		setBackground(java.awt.Color.lightGray);
 		setBorder(BorderFactory.createTitledBorder("Scores"));
 		((TitledBorder)getBorder()).setTitleColor(java.awt.Color.RED);
 		
@@ -49,14 +49,16 @@ public class GameViewScorePanel extends JPanel implements GameView {
 		this.playerNameLabels = new ArrayList<JLabel>();
 		this.playerScoreLabels = new ArrayList<JLabel>();
 		
-		for(int i=0; i< Ruleset.MAX_PLAYERS;i++){
-			JLabel playerNameLabel = new JLabel();
-			JLabel playerScoreLabel = new JLabel();
-			this.playerNameLabels.add(playerNameLabel);
-			this.playerScoreLabels.add(playerScoreLabel);
-			
-			this.add(playerNameLabels.get(i));
-			this.add(playerScoreLabels.get(i));
+		if (controller.getGameRuleset() != null) {
+			for(int i=0; i< controller.getGameRuleset().MAX_PLAYERS;i++){
+				JLabel playerNameLabel = new JLabel();
+				JLabel playerScoreLabel = new JLabel();
+				this.playerNameLabels.add(playerNameLabel);
+				this.playerScoreLabels.add(playerScoreLabel);
+				
+				this.add(playerNameLabels.get(i));
+				this.add(playerScoreLabels.get(i));
+			}
 		}
 		this.refresh();
 	}

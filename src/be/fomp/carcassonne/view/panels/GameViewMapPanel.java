@@ -89,8 +89,8 @@ public class GameViewMapPanel extends JPanel implements GameView {
 		int activePlayerId = model.getRound()%model.getPlayers().length; 
 		if("placing_card".equalsIgnoreCase(model.getPlayers()[activePlayerId].getState()))
 			
-		if(!(model.getMap().getActiveXPos() == Ruleset.MAX_TILES_PER_ROW/2 && model.getMap().getActiveYPos() == Ruleset.MAX_TILES_PER_COL/2))
-			tilePanels[model.getMap().getActiveXPos()][Ruleset.MAX_TILES_PER_COL - 1 - model.getMap().getActiveYPos()].update((Observable)model.getActiveTile(),this);
+		if(!(model.getMap().getActiveX() == Ruleset.MAX_TILES_PER_ROW/2 && model.getMap().getActiveY() == Ruleset.MAX_TILES_PER_COL/2))
+			tilePanels[model.getMap().getActiveX()][Ruleset.MAX_TILES_PER_COL - 1 - model.getMap().getActiveY()].update((Observable)model.getActiveTile(),this);
 		}
 		
 		double oldH = mapHeight; // for setting a new location
@@ -123,6 +123,7 @@ public class GameViewMapPanel extends JPanel implements GameView {
 		
 		@Override
 		public void mouseReleased(MouseEvent e) {
+			System.out.println("mouseReleased gvmp");
 			Object source = e.getSource();
 			switch(e.getButton()){
 				case 1:
@@ -139,7 +140,7 @@ public class GameViewMapPanel extends JPanel implements GameView {
 							
 							//if(GameMapValidator.checkFreeCoordinates(model, xPos, yPos))
 								controller.doClickTile(xPos, yPos);
-						
+
 						} catch(ActionNotAllowedException ana) {
 							JOptionPane.showMessageDialog(null, ana.getMessage(), null, JOptionPane.INFORMATION_MESSAGE);
 						}
@@ -155,6 +156,7 @@ public class GameViewMapPanel extends JPanel implements GameView {
 		public void mouseEntered(MouseEvent e) {}
 		@Override
 		public void mouseClicked(MouseEvent e){
+			System.out.println("mouseClicked gvmp");
 			switch (e.getButton()){
 			case 5:if(getX() > -mapWidth + GAME_AREA_W) setLocation(getX()-1, getY());
 					break;

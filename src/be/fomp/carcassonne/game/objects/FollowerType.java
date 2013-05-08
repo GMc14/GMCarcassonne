@@ -6,8 +6,9 @@ package be.fomp.carcassonne.game.objects;
  *
  */
 public enum FollowerType {
-	SCORING_MARKER,
+	FOLLOWER,
 	FARMER,
 	KNIGHT,
-	THIEF
+	THIEF, 
+	LARGE_FOLLOWER, PIG, BUILDER
 }

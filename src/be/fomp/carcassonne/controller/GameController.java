@@ -4,7 +4,9 @@ import java.util.Observer;
 
 import be.fomp.carcassonne.exceptions.ActionNotAllowedException;
 import be.fomp.carcassonne.exceptions.TileFactoryException;
+import be.fomp.carcassonne.game.objects.AreaType;
 import be.fomp.carcassonne.model.Player;
+import be.fomp.carcassonne.utils.Ruleset;
 
 
 /**
@@ -21,8 +23,9 @@ public interface GameController extends Observer {
 	 * @throws ActionNotAllowedException
 	 */
 	void doEditPlayers() throws ActionNotAllowedException;
-
 	
+	Ruleset getGameRuleset();
+	void setGameRuleset(Ruleset ruleset);
 	//Main events
 	/**
 	 * Action to change the scale of the tile map
@@ -83,9 +86,10 @@ public interface GameController extends Observer {
 	/**
 	 * Action which places the follower on a specified point on a tile.
 	 * @param location the coordinates to set the follower at
+	 * @return 
 	 * @throws ActionNotAllowedException when the game state is wrong
 	 */
-	void doClickFollowerLocation(int location) throws ActionNotAllowedException;
+	AreaType doClickFollowerLocation(int location) throws ActionNotAllowedException;
 	
 	/**
 	 * Action that confirms placing a follower
@@ -114,4 +118,9 @@ public interface GameController extends Observer {
 	 * @throws ActionNotAllowedException when this action is called in a wrong game state
 	 */
 	void doClickTile(int x, int y) throws ActionNotAllowedException;
+
+
+	boolean tryPlaceTile();
+
+
 }
